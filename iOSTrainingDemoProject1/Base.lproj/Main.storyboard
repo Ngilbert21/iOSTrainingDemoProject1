@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6ap-W2-g3Y">
-                                <rect key="frame" x="20" y="44" width="374" height="808"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6ap-W2-g3Y">
+                                <rect key="frame" x="20" y="44" width="374" height="481"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="Y8Q-C9-0kF" rowHeight="68" style="IBUITableViewCellStyleDefault" id="9y2-ki-X8D">
@@ -42,6 +42,14 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="dm7-Q8-r1P"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aq-hI-gWM">
+                                <rect key="frame" x="155" y="609" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go to Selection"/>
+                                <connections>
+                                    <action selector="SelectionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qFi-mR-c29"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -57,12 +65,60 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="FirstButton" destination="2aq-hI-gWM" id="cDq-Yt-PpK"/>
                         <outlet property="namesTV" destination="6ap-W2-g3Y" id="Jne-0c-d0n"/>
+                        <segue destination="WoI-Tp-A3s" kind="presentation" identifier="toSecondScreenSegue" id="y5E-lX-mUr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="119.86607142857142"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="q4Y-yj-kVL">
+            <objects>
+                <viewController id="WoI-Tp-A3s" customClass="SecondViewController" customModule="iOSTrainingDemoProject1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qtb-XQ-dS0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="281-wk-6aH" userLabel="topTitleLabel">
+                                <rect key="frame" x="20" y="0.0" width="374" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Name text goes here">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAN-iU-Fr4">
+                                <rect key="frame" x="20" y="29" width="65" height="30"/>
+                                <state key="normal" title="OK, got it"/>
+                                <connections>
+                                    <action selector="confirmButtonPressed:" destination="WoI-Tp-A3s" eventType="touchUpInside" id="LRp-HO-4Fi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bAN-iU-Fr4" firstAttribute="leading" secondItem="6B3-VK-VeB" secondAttribute="leading" constant="20" id="9Tq-bo-fVc"/>
+                            <constraint firstItem="281-wk-6aH" firstAttribute="top" secondItem="6B3-VK-VeB" secondAttribute="top" id="HGs-QJ-55E"/>
+                            <constraint firstItem="bAN-iU-Fr4" firstAttribute="top" secondItem="281-wk-6aH" secondAttribute="bottom" constant="8" id="QNH-o9-ao0"/>
+                            <constraint firstItem="281-wk-6aH" firstAttribute="leading" secondItem="6B3-VK-VeB" secondAttribute="leading" constant="20" id="Qt8-k1-YUk"/>
+                            <constraint firstItem="6B3-VK-VeB" firstAttribute="trailing" secondItem="281-wk-6aH" secondAttribute="trailing" constant="20" id="eZN-yq-FYT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6B3-VK-VeB"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmButton" destination="bAN-iU-Fr4" id="pbp-2l-AFB"/>
+                        <outlet property="topTitleLabel" destination="281-wk-6aH" id="QUm-u5-fed"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rpP-Yx-RC6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="847.82608695652175" y="118.52678571428571"/>
         </scene>
     </scenes>
 </document>

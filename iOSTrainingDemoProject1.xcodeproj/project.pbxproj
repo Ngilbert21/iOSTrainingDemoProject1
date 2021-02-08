@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EC1C5EBA25CAE09A0036DCAA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1C5EB925CAE09A0036DCAA /* SecondViewController.swift */; };
 		EC1C5EBC25CB84920036DCAA /* TrainingClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1C5EBB25CB84920036DCAA /* TrainingClass.swift */; };
+		EC1C5EC025CC38700036DCAA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1C5EBF25CC38700036DCAA /* HomeViewController.swift */; };
+		EC1C5EC425CC47BE0036DCAA /* FieldEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1C5EC325CC47BE0036DCAA /* FieldEmployee.swift */; };
 		ECC32ECC25C98F760044028E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC32ECB25C98F760044028E /* AppDelegate.swift */; };
 		ECC32ECE25C98F760044028E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC32ECD25C98F760044028E /* SceneDelegate.swift */; };
 		ECC32ED025C98F760044028E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC32ECF25C98F760044028E /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		EC1C5EB925CAE09A0036DCAA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		EC1C5EBB25CB84920036DCAA /* TrainingClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingClass.swift; sourceTree = "<group>"; };
+		EC1C5EBF25CC38700036DCAA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EC1C5EC325CC47BE0036DCAA /* FieldEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldEmployee.swift; sourceTree = "<group>"; };
 		ECC32EC825C98F760044028E /* iOSTrainingDemoProject1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTrainingDemoProject1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC32ECB25C98F760044028E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC32ECD25C98F760044028E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 		ECC32ECA25C98F760044028E /* iOSTrainingDemoProject1 */ = {
 			isa = PBXGroup;
 			children = (
+				EC1C5EC325CC47BE0036DCAA /* FieldEmployee.swift */,
+				EC1C5EBF25CC38700036DCAA /* HomeViewController.swift */,
 				ECC32ECB25C98F760044028E /* AppDelegate.swift */,
 				ECC32ECD25C98F760044028E /* SceneDelegate.swift */,
 				ECC32ECF25C98F760044028E /* ViewController.swift */,
@@ -270,9 +276,11 @@
 			files = (
 				ECC32ED625C98F760044028E /* iOSTrainingDemoProject1.xcdatamodeld in Sources */,
 				ECC32ED025C98F760044028E /* ViewController.swift in Sources */,
+				EC1C5EC425CC47BE0036DCAA /* FieldEmployee.swift in Sources */,
 				ECC32ECC25C98F760044028E /* AppDelegate.swift in Sources */,
 				EC1C5EBA25CAE09A0036DCAA /* SecondViewController.swift in Sources */,
 				EC1C5EBC25CB84920036DCAA /* TrainingClass.swift in Sources */,
+				EC1C5EC025CC38700036DCAA /* HomeViewController.swift in Sources */,
 				ECC32ECE25C98F760044028E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

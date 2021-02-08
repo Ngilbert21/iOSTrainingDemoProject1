@@ -12,8 +12,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var namesTV: UITableView!
     
+    @IBOutlet weak var FirstButton: UIButton!
+    
+    var AName : String = ""
     
     let names = ["David", "Dom", "Nicholas", "Richard", "Walter", "Weiguo"]
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //print(names[indexPath.row])
+        //tableView.deselectRow(at: indexPath, animated: true)
+        let partName = names[indexPath.row]
+        AName = names[indexPath.row]
+
+        let vc = SecondViewController(names: partName)
+        
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,7 +49,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
-
+    @IBAction func SelectionButton(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "toSecondScreenSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSecondScreenSegue", let destination = segue.destination as? SecondViewController {
+            let destinationVC = segue.destination as! SecondViewController
+            destinationVC.TheName = AName
+    
+        }
+    }
     
 
 }
